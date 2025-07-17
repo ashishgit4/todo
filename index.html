@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <div class="container">
+       <button id="theme-toggle"><i class="ri-sun-line"></i></button>
+        <div class="todo-web">
+            <h1>Todo List  </h1>
+            <div class="stats-container">
+                <div  class="details">
+                    <h3>keep Growing</h3>
+                    <div class="state-number">
+                        <p id="numbers"> 0/0 </p>
+                    </div>
+                    <div id="progressbar">
+                        <div id="progress"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <form class="input-area">
+                <input type="text" id="task-input" placeholder="Add a new task..." required>
+                <button type="submit" id="add-task-btn"><i class="ri-add-line"></i></button>
+            </form>
+            <div class="todo-container">
+                <ul id="task-list"> </ul>
+                    <img id="empty-image" src="https://imgs.search.brave.com/2UjMVMDJFrxC0H6XNpMa229pe-rjwvvLApEMG5YwOp4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvd2ViLWRl/dmVsb3BtZW50LWls/bHVzdHJhdGlvbi1k/b3dubG9hZC1pbi1z/dmctcG5nLWdpZi1m/aWxlLWZvcm1hdHMt/LXByb2dyYW1tZXIt/d29ya2luZy13ZWJz/aXRlLWRldmVsb3Bl/ci1wcm9ncmFtbWlu/Zy1wYWNrLXBlb3Bs/ZS1pbGx1c3RyYXRp/b25zLTM3NjY5MDEu/cG5n"
+                        alt="list">
+                
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: "Jost", sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(daniel-peragine-m7DfQX2Tbnw-unsplash.jpg) no-repeat center center/cover;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+
+.todo-container img {
+    height: 25vh;
+}
+
+.todo-web {
+    display: flex;
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 30px;
+    color: rgb(22, 21, 21);
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
+    border: 3px solid rgba(255,255,255,0.20);
+    backdrop-filter: blur(8px);
+}
+
+.todo-web h1{
+    font-size: 2rem;
+}
+
+.input-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.input-area input{
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    padding: 10px 17px;
+    border-radius: 20px;
+    text-decoration-style: none;
+    background-color: rgba(233, 243, 217, 0.18);
+    color: rgb(27, 26, 26);
+    font-weight: 600;
+    border: none;
+
+}
+
+
+.input-area input:hover{
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    padding: 10px 17px;
+    border-radius: 20px;
+    text-decoration-style: none;
+    background-color: rgba(233, 243, 217, 0.18);
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    color: rgb(27, 26, 26);
+    font-weight: 600;
+    border: none;
+
+}
+
+
+.input-area button{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(233, 243, 217, 0.18);
+    color: whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+
+.input-area button:hover{
+    height: 2.5rem;
+    width: 2.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    background-color:rgba(93, 114, 63, 0.329);
+    color: whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.task-list{
+    width: 100%;
+
+}
+
+
+#task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 30px; 
+    background-color: rgba(172, 255, 47, 0.14);  
+    font-size: 1.2rem;
+    color:whitesmoke;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+
+#task-list li:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+#task-list li .checkbox {
+    min-width:20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition:all 0.2s ease-in-out;
+    cursor: pointer;
+    background:transparent;
+    appearance: none;
+    border-radius: 50%;
+}
+
+
+#task-list input.checkbox:checked{
+    background: transparent;
+    transform:scale(1.1);
+}
+
+
+#task-list li .checkbox:checked::before{
+    content: '\2713';
+    color: #f6f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
+#task-list li span {
+  flex: 1;
+  margin-left: 10px;
+  word-wrap: break-word;
+}
+
+
+#task-list  li.completed span{
+    text-decoration: 2px line-through rgb(35, 35, 35);
+    color : black;
+}
+
+.task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+
+}
+
+.task-buttons button{
+    background-color: #637e3f7a;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-buttons button:hover{
+    transform: scale(1.2);
+}
+
+.task-buttons .edit-btn{
+    background-color: #ffbf00;
+}
+
+.task-buttons .delete-btn{
+    background-color: #171717;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; 
+}
+
+.stats-container{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.details{
+    width: 100%;
+}
+
+.details h3{
+    color: #ffffffcc;
+}
+
+#progressbar{
+    width: 100%;
+    height: 7px;
+    background-color: rgba(33, 32, 32, 0.658);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+}
+
+#progress{
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #ffbf00;
+    transition: width 0.3s ease;
+}
+
+#numbers{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 80px;
+ height: 80px;
+ background-color: #ffbf00;
+ border: 2px solid black;
+ font-weight: bold;
+ border-radius: 50%;
+ font-size: 1.1rem;
+}
+
+
+
+#theme-toggle{
+    position: fixed;
+    height: 2rem;
+    width: 2rem;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform  0.2s ease-in-out;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .todo-web {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+/* media */
+@media (max-width:600px){
+    .container{
+        margin: 0 20px;
+        padding: 0 10px;
+    }
+
+    .todo-web{
+        padding: 1.5rem;
+        gap:20px;
+    }
+
+    #numbers{
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;       
+    }
+
+    .input-area input {
+        font-size: 1rem;
+    }
+
+    #task list li{
+        font-size: 1rem;
+    }
+    #theme-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
